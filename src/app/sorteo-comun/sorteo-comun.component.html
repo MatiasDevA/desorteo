@@ -1,0 +1,34 @@
+<div class="container-fluid">
+ 
+    <h1 class="fs1 text-dark text-center "> Sorteo comun</h1>
+<form class="mx-auto w-75" *ngIf="sorteoEmpleado">
+    <div class="mb-3">
+      <label for="cantidad" class="form-label">Cantidad de empleados</label>
+      <input type="number" class="form-control" id="cantidad" #total >
+    </div>
+    <div class="mb-3">
+      <label for="sorteados" class="form-label">Cantidad de sorteados</label>
+      <input type="number" class="form-control" id="sorteados" #sorteo>
+    </div>
+    <button (click)="sorteoEmpleado(total,sorteo)">clickear</button>
+</form>
+
+<table class="table table-striped" *ngIf="listaEmpleados">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let empleado of listaEmpleados;">
+      <td> {{empleado.nombre}}</td>
+      <td>{{empleado.apellido}}</td>
+      <td>{{empleado.edad}}</td>
+      <td>{{empleado.email}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

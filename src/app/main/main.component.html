@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-3">
+            <ul class="list-group">
+            <li style="cursor:pointer" class="list-group-item list-group-item-action " [routerLink]="['lista']" routerLinkActive="active" >Ver todo los empleados</li>
+            <li style="cursor:pointer" class="list-group-item list-group-item-action" [routerLink]="['cargar']" routerLinkActive="active" >Cargar Empleados</li>
+            <li style="cursor:pointer" class="list-group-item list-group-item-action" [routerLink]="['sorteo']" routerLinkActive="active" >Sorteo Comun</li>
+            <li style="cursor:pointer" class="list-group-item list-group-item-action" [routerLink]="['sorteo','personalizado']" routerLinkActive="active">Sorteo Personalizado</li>
+        </ul>
+        </div>
+        <div class="col-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    
+</div>

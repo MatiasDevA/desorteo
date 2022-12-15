@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <h5 class="text-center fs-1">Lista de empleados</h5>
+    
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+
+       
+         <tr *ngFor="let empleado of empleadoLista$ | async ">
+            <td>{{empleado.empleadoId}}</td>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellido}}</td>
+            <td>{{empleado.edad}}</td>
+            <td>{{empleado.email}}</td>
+          </tr> 
+        
+        </tbody>
+      </table>
+</div>
